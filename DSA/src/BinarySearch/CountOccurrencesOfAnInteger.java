@@ -43,6 +43,15 @@ class CountOccurrences {
         System.out.println(res);
     }
 
+    // We can solve this using Linear Search. But it will take O(N). We strictly need to use Binary Search here.
+    // EX., [1 1 2 2 2 2 3], target = 2
+    //      If we find the first occurrence and the last occurrence of 2 in an array, then we will be able to find
+    //      the count.
+    //      In the above ex., 2 occurrence at index 2 first and at index 5 last.
+    //      If we do, (5 - 2) + 1, then we will get the total count of target 2.
+    //
+    // T.C.: O(logN) + O(logN) = O(logN)
+    // S.C.: O(1)
     static int countOccurrences(int n, int k, int[] a) {
 
         int l = 0;
